@@ -1,0 +1,17 @@
+<mvc:View controllerName="com.sap.sampleD3HandsOn.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:customControl="com.sap.sampleD3HandsOn.control" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<VBox id="idContainer" class="container">
+						<customControl:D3CustomControl width="1280px" height="720px" circles="{circleData>/}">
+							<customControl:D3CustomControlAggregation x="{circleData>x}" y="{circleData>y}" r="{circleData>radius}" color="{circleData>color}"
+								press="onCirclePress"/>
+						</customControl:D3CustomControl>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
